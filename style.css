@@ -1,0 +1,38 @@
+/* Resets */
+body {
+  margin: unset;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/* Variables */
+:root {
+  --color-black-90: #202225;
+}
+
+/* Components */
+.screen {
+  background-color: var(--color-black-90);
+  border-radius: 10px;
+  min-height: 100vh;
+}
+
+.title-bar {
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 12px;
+  padding-right: 9px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
