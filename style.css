@@ -15,16 +15,17 @@ img {
 
 /* Components */
 .screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
   background-color: var(--color-black-90);
   border-radius: 10px;
-  min-height: 100vh;
 }
 
-.title-bar {
-  height: 22px;
-
+.screen-bar {
+  padding: 6px 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   padding-left: 12px;
@@ -35,4 +36,32 @@ img {
   display: flex;
   align-items: center;
   gap: 28px;
+}
+
+.screen-contents {
+  display: flex;
+  flex-grow: 1;
+}
+
+.channels {
+  width: 70px;
+  box-shadow: inset 0 0 20px red;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.main-friends {
+  width: 240px;
+  box-shadow: inset 0 0 20px blue;
+}
+
+.main-contents {
+  flex-grow: 1;
+  box-shadow: inset 0 0 20px pink;
+  flex-basis: 0;
+  min-width: 0;
 }
