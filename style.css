@@ -10,7 +10,11 @@ img {
 
 /* Variables */
 :root {
+  --color-black-50: #36393f;
+  --color-black-70: #2f3136;
   --color-black-90: #202225;
+
+  --color-blue: #5865f2;
 }
 
 /* Components */
@@ -24,12 +28,9 @@ img {
 }
 
 .screen-bar {
-  padding: 6px 0;
+  padding: 8px 12px;
   display: flex;
   justify-content: space-between;
-
-  padding-left: 12px;
-  padding-right: 9px;
 }
 
 .controls {
@@ -45,7 +46,38 @@ img {
 
 .channels {
   width: 70px;
-  box-shadow: inset 0 0 20px red;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.me::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-black-50);
+  border-radius: 1px;
+}
+
+.profile {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2 linear;
 }
 
 .main {
@@ -54,14 +86,19 @@ img {
   flex-basis: 0;
 }
 
-.main-friends {
+.friends {
   width: 240px;
-  box-shadow: inset 0 0 20px blue;
+  background-color: var(--color-black-70);
 }
 
-.main-contents {
+.contents {
   flex-grow: 1;
-  box-shadow: inset 0 0 20px pink;
   flex-basis: 0;
   min-width: 0;
+  background-color: var(--color-black-50);
+}
+
+.status {
+  width: 417px;
+  background-color: var(--color-black-50);
 }
